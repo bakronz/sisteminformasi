@@ -1,0 +1,125 @@
+/* Warna Latar Baru */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #00111c, #002438, #003952, #004766);
+    color: #e4e4e4;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #00ffa3, #005cff);
+    color: #fff;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  .header h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: glow-text 3s infinite alternate;
+  }
+  
+  .header p {
+    font-size: 1.5rem;
+    margin: 20px 0 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animasi teks bersinar */
+  @keyframes glow-text {
+    from {
+      text-shadow: 0 0 10px #00ffa3, 0 0 20px #005cff, 0 0 30px #00e6b7;
+    }
+    to {
+      text-shadow: 0 0 20px #00ffa3, 0 0 40px #005cff, 0 0 50px #0074ff;
+    }
+  }
+  
+  /* Section Tim */
+  .team-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 30px;
+  }
+  
+  /* Kartu Anggota */
+  .member-card {
+    background: rgba(15, 15, 35, 0.9);
+    border: 2px solid #00ffa3;
+    border-radius: 15px;
+    width: 360px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 8px 20px rgba(0, 255, 163, 0.6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .member-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 50px rgba(0, 255, 163, 0.9);
+    animation: hover-glow 1.5s infinite alternate;
+  }
+  
+  /* Efek hover bersinar */
+  @keyframes hover-glow {
+    from {
+      box-shadow: 0 10px 40px rgba(0, 255, 163, 0.8);
+    }
+    to {
+      box-shadow: 0 20px 60px rgba(0, 255, 163, 1);
+    }
+  }
+  
+  /* Foto Anggota */
+  .member-card .image-wrapper {
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border: 3px solid #005cff;
+    box-shadow: 0 0 15px rgba(0, 92, 255, 0.6);
+    transform: scale(1) rotate(0deg);
+    transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease;
+  }
+  
+  .member-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.6s ease;
+    filter: grayscale(30%);
+  }
+  
+  .member-card:hover .image-wrapper {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 30px rgba(0, 92, 255, 0.8);
+  }
+  
+  .member-card:hover .image-wrapper img {
+    filter: grayscale(0%);
+  }
+  
+  /* Teks Kartu */
+  .member-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #00ffa3;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .member-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-family: 'Roboto Mono', monospace;
+    color: #d6d6f5;
+  }
+  
